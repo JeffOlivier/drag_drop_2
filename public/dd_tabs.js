@@ -1,7 +1,7 @@
 $( function() {
-	var maxTabs = 5;
-	var originalTabOrder = getTabOrder();
-	var currentTabOrder = getTabOrder();
+	const maxTabs = 5;
+	let originalTabOrder = getTabOrder();
+	let currentTabOrder = getTabOrder();
 	
 	// start off with the "update order" submit button disabled
 	disableTabsUpdateOrderButton();
@@ -84,21 +84,21 @@ $( function() {
 });
 
 
-function enableTabsUpdateOrderButton() {
+const enableTabsUpdateOrderButton = () => {
 	$("#submitNewTabOrder").addClass('enable').removeClass('disable');
 	$("#submitNewTabOrder").attr("disabled", false);
 }
 
 
-function disableTabsUpdateOrderButton() {
+const disableTabsUpdateOrderButton = () => {
 	$("#submitNewTabOrder").addClass('disable').removeClass('enable');
 	$("#submitNewTabOrder").attr("disabled", true);
 }
 
 
-function getTabOrder() {
-	var tabOrder = '';
-	var separator = '';
+const getTabOrder = () => {
+	let tabOrder = '';
+	let separator = '';
 
 	$('#active_tabs > .single_tab').each(function (index) {
 		separator = (index == 0) ? '' : ',';
@@ -110,7 +110,7 @@ function getTabOrder() {
 
 
 // Update the "Update Icon Order" submit button
-function checkForOrderChangesFromCurrent (originalTabOrder, currentTabOrder) {
+const checkForOrderChangesFromCurrent = (originalTabOrder, currentTabOrder) => {
 	// Check to see if the original order is different than the current order
 	if (currentTabOrder == originalTabOrder) {
 		disableTabsUpdateOrderButton();
