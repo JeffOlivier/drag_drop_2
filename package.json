@@ -1,0 +1,23 @@
+{
+  "name": "drag_drop_2",
+  "version": "1.0.0",
+  "description": "_This tool is built using **JavaScript ES6**, **jQuery**, and **SASS**._",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeffOlivier/drag_drop_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeffOlivier/drag_drop_2/issues"
+  },
+  "homepage": "https://github.com/JeffOlivier/drag_drop_2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sass": "^1.30.0"
+  }
+}

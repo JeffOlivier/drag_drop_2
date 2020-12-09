@@ -1,0 +1,217 @@
+/* color definitions */
+$gradient_middle: silver; //#c0c0c0
+$tabs_active_desktop_only: cornflowerblue; //#3089e0
+$tabs_active: darkgreen; //#006400
+$tabs_extra: slategray; //#708090
+$tabs_error: maroon; //#800000
+$info_box_border: orange; //#ffa500
+$button_enabled: orange; //#ffa500
+$button_disabled: gray; //#808080
+
+html {
+   background-color: antiquewhite;
+   font-family: montserratsemi_bold,montserratregular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+body {
+  margin: 0px !important;
+}
+
+h1 {
+   text-align: center;
+   font-size: 30px;
+	 padding-bottom: 30px;
+}
+
+a {
+	 text-decoration: none;
+}
+
+/* CONTAINERS */
+#tabs_outer_container {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 250px 100px;
+	ul {
+		list-style: none;
+	}
+}
+.notUsed_container {
+	background-color: white;
+	border: 2px red dashed;
+	margin-top: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#inacitveTabs {
+	width: 275px;
+	min-height: 200px;
+	margin: 41px auto 0 auto;
+}
+.tab_container {
+	font-family: montserratregular,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+.extra_tabs_container {
+	width: 400px;
+	margin: 30px auto 100px 100px;
+	padding: 15px;
+	
+	background-color: #ffffff;
+	margin-top: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px black solid;
+	float: left;
+}
+#extra_tabs {
+	min-height: 100px;
+}
+.update_container {
+	float: left;
+	margin-top: 150px;
+	margin-left: 50px;
+}
+/* ---------------------------- */
+.sortable-placeholder {
+	border: 1px dotted #e6e6e6;
+	height: 40px;
+	width: 150px;
+	color: #ffffff;
+}
+/* ---------------------------- */
+
+#active_tabs, #extra_tabs {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#active_tabs li {
+	float: left;
+	margin: 0 .5em 0 0;
+margin-left: 20px;
+}
+
+#active_tabs a {
+	float: left;
+}
+
+/* CREATES THE TABS */
+/* The tab's middle part */
+#active_tabs a, #extra_tabs a {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+	
+	position: relative;
+	padding: 1em;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 3px 3px rgba(0,0,0,.4);
+	
+	/* The tab's right side */
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		right: -.5em;
+		width: 1.2em;
+		box-shadow: 3px 3px 3px rgba(0,0,0,.4);
+		transform: skew(15deg);
+		border-radius: 0 5px 0 0;
+	}
+	/* The tab's left side */
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: -.5em;
+		width: 1.2em;
+		box-shadow: 0px 6px 3px -3px rgba(0,0,0,.4);
+		transform: skew(-15deg);
+		border-radius: 5px 0 0 0;
+	}
+}
+
+/* TAB COLORS */
+#active_tabs a, #active_tabs a:before, #active_tabs a:after {
+	background-image: linear-gradient($tabs_active_desktop_only, $gradient_middle, $tabs_active_desktop_only);
+}
+#active_tabs .mobile a, #active_tabs .mobile a:before, #active_tabs .mobile a:after {
+	background-image: linear-gradient($tabs_active, $gradient_middle, $tabs_active) !important;
+}
+#extra_tabs a, #extra_tabs a:before, #extra_tabs a:after {
+	background-image: linear-gradient($tabs_extra, $gradient_middle, $tabs_extra);
+}
+
+#content {
+	background: #ffffff;
+	padding: 2em;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	border-radius: 0 5px 5px 5px;
+	box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+}
+
+#extra_tabs {
+	display: flex;
+	flex-direction: column;
+}
+#active_tabs li a, #extra_tabs li a {
+	width: 150px;
+	text-align: center;
+}
+#extra_tabs li {
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	a {
+		position: absolute;
+	}
+}
+.mobile_tabs_indicator {
+	width: 610px !important;
+	border: red dashed;
+	border-width: 0px 2px 2px 2px;
+	margin-left: 5px;
+	width: 530px;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* SUBMIT UPDATE BUTTON */
+.smOrderUpdateButton {
+	width: 200px;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	border-radius: 5px;
+	color: black;
+	margin: 0 auto;
+	display: table;
+
+	&.disable {
+		background-color: $button_disabled;
+		color: darkgray;
+	}
+
+	&.enable {
+		background-color: $button_enabled;
+	}
+}
+
+.clearMe {
+	clear: both;
+}

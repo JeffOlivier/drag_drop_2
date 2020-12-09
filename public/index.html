@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Drag and Drop - Section Tabs Manager"
+        />
+        <title>Jeff Codes | Drag and Drop 2: Section Tabs Manager</title>
+        <link rel="stylesheet" href="./dd_tabs.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="./dd_tabs.js"></script>
+    </head>
+    <body>
+        <header>
+            <style>
+                header { background-image: url("./header.jpeg");
+                    background-position: center 15%; background-repeat: no-repeat; background-size: cover;
+                    padding: 10px 10px 10px 20px;
+                    color: white; font-weight: bold; text-align: left; font-family: sans-serif; font-size: 150%;
+                }
+                header a { color: white; text-decoration: none; }
+                @media only screen and (max-width: 800px) {
+                    header { background-position: right; }
+                }
+                @media only screen and (max-width: 700px) {
+                    header { padding: 10px; }
+                }
+            </style>
+            <div class="name"><a href='http://www.jeffolivier.codes' title='HOME'>&lt;Jeff Olivier Codes /&gt;</a></div>
+        </header>
+
+        <h1>Drag &amp; Drop 2: Section Tabs Manager</h1>
+
+        <!-- Container to hold all of the active section tabs -->
+        <div id="tabs_outer_container" class="tab_container">
+
+            <ul id="active_tabs" class="ui-sortable">
+                <li id="tab_id_1" class="single_tab mobile exclude" data-order="1" data-typeid="4" data-typename="fruit">
+                    <a href="#" name="tab1">fruit</a>
+                </li>
+                <li id="tab_id_2" class="single_tab mobile ui-sortable-handle" data-order="2" data-typeid="38" data-typename="vegitable">
+                    <a href="#" name="tab2">vegitable</a>
+                </li>
+                <li id="tab_id_3" class="single_tab mobile ui-sortable-handle" data-order="3" data-typeid="19" data-typename="bakery">
+                    <a href="#" name="tab3">bakery</a>
+                </li>
+                <li id="tab_id_4" class="single_tab ui-sortable-handle" data-order="4" data-typeid="2" data-typename="dairy">
+                    <a href="#" name="tab4">dairy</a>
+                </li>
+            </ul>
+            
+            <div class="mobile_tabs_indicator">MOBILE TABS</div>
+            
+            <div>
+                <div class="extra_tabs_container">
+                    ADDITIONAL UNUSED TAB OPTIONS
+                    <div id="inacitveTabs" class="">
+                        <ul id="extra_tabs" class="ui-sortable">
+                            <li id="tab_id_5" class="single_tab ui-sortable-handle" data-order="0" data-typeid="9" data-typename="frozen">
+                                <a href="#" name="tab5">frozen</a>
+                            </li>
+                            <li id="tab_id_6" class="single_tab ui-sortable-handle" data-order="0" data-typeid="15" data-typename="meat">
+                                <a href="#" name="tab6">meat</a>
+                            </li>
+                            <li id="tab_id_7" class="single_tab ui-sortable-handle" data-order="0" data-typeid="24" data-typename="seafood">
+                                <a href="#" name="tab7">seafood</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="update_container">
+                    <button type="submit" id="submitNewTabOrder" class="smOrderUpdateButton disable" value="update" disabled="disabled">Save Tab Options</button>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
