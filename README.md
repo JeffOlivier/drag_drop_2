@@ -12,7 +12,7 @@ _This tool is built using the following:_
 - jQuery's _sortable_
 - Modular Sass
 
-[Working Demo]http://dragdroptabs.jeffolivier.codes
+[Working Demo](http://dragdroptabs.jeffolivier.codes)
 
 ## How to use this app
 
