@@ -16,8 +16,8 @@ _This tool is built using the following:_
 
 ## How to use this app
 
-**Green tabs** will be shown on only the mobile-sized (whatever you determine) screen widths of your site<br>
-**Blue tabs** will be shown on all screen widths of your site<br>
+**Green tabs** will be shown on only the mobile-sized (whatever you determine) screen widths of your site\
+**Blue tabs** will be shown on all screen widths of your site\
 **gray tabs** are additional ones that you can add to your menu
 
 - The initial order of the tabs is preset
