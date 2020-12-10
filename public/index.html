@@ -16,120 +16,126 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="./dd_tabs.js"></script>
     </head>
+
     <body>
-        <header>
-            <style>
-                header { background-image: url("./images/header.jpeg");
-                    background-position: center 15%; background-repeat: no-repeat; background-size: cover;
-                    padding: 10px 10px 10px 20px;
-                    color: white; font-weight: bold; text-align: left; font-family: sans-serif; font-size: 150%;
-                }
-                header a { color: white; text-decoration: none; }
-                @media only screen and (max-width: 800px) {
-                    header { background-position: right; }
-                }
-                @media only screen and (max-width: 700px) {
-                    header { padding: 10px; }
-                }
-            </style>
-            <div class="name"><a href='http://www.jeffolivier.codes' title='HOME'>&lt;Jeff Olivier Codes /&gt;</a></div>
-        </header>
+        <div class="pageWrapper">
+            <header>
+                <style>
+                    header { background-image: url("./images/header.jpeg");
+                        background-position: center 15%; background-repeat: no-repeat; background-size: cover;
+                        padding: 10px 10px 10px 20px;
+                        color: white; font-weight: bold; text-align: left; font-family: sans-serif; font-size: 150%;
+                    }
+                    header a { color: white; text-decoration: none; }
+                    @media only screen and (max-width: 800px) {
+                        header { background-position: right; }
+                    }
+                    @media only screen and (max-width: 700px) {
+                        header { padding: 10px; }
+                    }
+                </style>
+                <div class="name"><a href='http://www.jeffolivier.codes' title='HOME'>&lt;Jeff Olivier Codes /&gt;</a></div>
+            </header>
 
-        <div id="pageContent" class="pageContent">
-            <div id="menuContainer" class="menuContainer">
-                <div id="menuItemContainer" class="menuItemContainer">
-                    <div class="menuItem purpose">PURPOSE <i class="arrow fa fa-chevron-right" aria-hidden="true"></i></div>
-                    <div id="purpose" class="menuItemInfoContainer">
-                        <h3>PURPOSE OF THIS APP</h3>
-                        <p>This is an app I created to demonstrate a proof of concept for a former employer. My former employer is a multilingual 
-                        international company with close to 70 different versions of their website to represent the country the user is coming 
-                        from. Each country's version of the website could potentially have different types of product offerings which were not 
-                        always the easiest for their customers to find in the different menus or submenus. I suggested that they create a single 
-                        search form on the homepage with different tabs that would change the search form for the chosen product offering. I 
-                        solved and demonstrated this by creating the <span class="emp">Section Tab Manager</span>, a very easy to use tool that allows the marketing 
-                        department to make changes at their leisure. One of the requirements for the site was to only show three tabs in mobile 
-                        view, but show up to 5 on larger screen sizes. This is just a POC, so the tab names for demonstration purposes and are 
-                        not what my former employer uses. To keep the integrity of the production site, a logging table was added to keep track 
-                        of all changes and by whom.</p>
+            <div class="pageContent">
+                <div class="menuContainer">
+                    <div id="purpose" class="menuItemContainer">
+                        <div class="menuItem purpose">PURPOSE <i class="arrow fa fa-chevron-right" aria-hidden="true"></i></div>
+                        <div class="menuItemInfoContainer">
+                            <h3>PURPOSE OF THIS APP</h3>
+                            <p>This is an app I created to demonstrate a proof of concept for a former employer. My former employer is a multilingual 
+                            international company with close to 70 different versions of their website to represent the country the user is coming 
+                            from. Each country's version of the website could potentially have different types of product offerings which were not 
+                            always the easiest for their customers to find in the different menus or submenus. I suggested that they create a single 
+                            search form on the homepage with different tabs that would change the search form for the chosen product offering. I 
+                            solved and demonstrated this by creating the <span class="emp">Section Tab Manager</span>, a very easy to use tool that allows the marketing 
+                            department to make changes at their leisure. One of the requirements for the site was to only show three tabs in mobile 
+                            view, but show up to 5 on larger screen sizes. This is just a POC, so the tab names for demonstration purposes and are 
+                            not what my former employer uses. To keep the integrity of the production site, a logging table was added to keep track 
+                            of all changes and by whom.</p>
 
-                        <div>This tool is built using the following:</div>
-                        <li>JavaScript ES6</li>
-                        <li>jQuery's sortable</li>
-                        <li>Sass</li>
+                            <div class="emp">This tool is built using the following:</div>
+                            <li>JavaScript ES6</li>
+                            <li>jQuery's sortable</li>
+                            <li>Sass</li>
+                        </div>
                     </div>
+
+                    <div id="howToUse" class="menuItemContainer">
+                        <div class="menuItem howToUse">HOW TO USE <i class="arrow fa fa-chevron-right" aria-hidden="true"></i></div>
+                        <div class="menuItemInfoContainer">
+                            <h3>HOW TO USE THIS APP</h3>
+                            <p>
+                                <span class="greenMe">Green tabs</span> will be shown on only the mobile-sized (whatever you determine) screen widths of your site<br>
+                                <span class="blueMe">Blue tabs</span> will be shown on all screen widths of your site<br>
+                                <span class="grayMe">Gray tabs</span> are additional ones that you can add to your menu
+                            </p>
+                            <p>
+                                <li>The initial order of the tabs is preset for this demonstration</li>
+                                <li>Mobile-sized screens will show only 3 tabs (represented as <span class="emp greenMe">green</span>), and larger screens can show up to 5</li>
+                                <li>You can rearrange the order of the <span class="emp greenMe">green</span> and <span class="emp blueMe">blue</span> tabs</li>
+                                <li>Move a <span class="emp blueMe">blue</span> or <span class="emp greenMe">green</span> tab to the white box to remove it from being seen/used</li>
+                                <li>Add a new tab to your active menu by moving a <span class="emp grayMe">gray</span> one from the white area inline with the <span class="emp greenMe">green</span>/<span class="emp blueMe">blue</span> icons</li>
+                                <li>The <span class="emp">Save Tab Options</span> button only becomes <span class="emp">active</span> when there is an actual change to be saved</li>
+                                <li>The <span class="emp">Save</span> button does not actually save the new order since this is just a demo</li>
+                                <li>You can not edit the name of each individual tab</li>
+                                <li>This tool was not designed for use on a mobile device</li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="menuItem"><a href='https://github.com/JeffOlivier/drag_drop_tabs' target='_blank' rel='noreferrer' title='drag_drop_tabs on GitHub'><i class="fa fa-github" aria-hidden="true"></i> <i class="fa fa-code-fork" aria-hidden="true"></i> GitHub REPO</a></div>
                 </div>
 
-                <div id="menuItemContainer" class="menuItemContainer">
-                    <div class="menuItem howToUse">HOW TO USE <i class="arrow fa fa-chevron-right" aria-hidden="true"></i></div>
-                    <div id="howToUse" class="menuItemInfoContainer">
-                        <h3>HOW TO USE THIS APP</h3>
+                <div class="projectContainer">
+                    <h1>Drag &amp; Drop Section Tabs Manager</h1>
 
-                        <span class="greenMe">Green tabs</span> will be shown on only the mobile-sized (whatever you determine) screen widths of your site<br>
-                        <span class="blueMe">Blue tabs</span> will be shown on all screen widths of your site<br>
-                        <span class="grayMe">Gray tabs</span> are additional ones that you can add to your menu<br>
-                        <br>
-                        <li>The initial order of the tabs is preset for this demonstration</li>
-                        <li>Mobile-sized screens will show only 3 tabs (represented as green), and larger screens can show up to 5</li>
-                        <li>You can rearrange the order of the green and blue tabs</li>
-                        <li>Move a blue or green tab to the white box to remove it from being seen/used</li>
-                        <li>Add a new tab to your active menu by moving a gray one from the white area inline with the green/blue icons</li>
-                        <li>The <span class="emp">Save Tab Options</span> button only becomes <span class="emp">active</span> when there is an actual change to be saved</li>
-                        <li>The <span class="emp">save</span> button does not actually save the new order since this is just a demo</li>
-                        <li>You can not edit the name of each individual tab</li>
-                        <li>This tool was not designed for use on a mobile device</li>
-                    </div>
-                </div>
+                    <!-- Container to hold all of the active section tabs -->
+                    <div id="tabs_outer_container" class="tab_container">
 
-                <div class="menuItem"><a href='https://github.com/JeffOlivier/drag_drop_tabs' target='_blank' rel='noreferrer' title='drag_drop_tabs on GitHub'><i class="fa fa-github" aria-hidden="true"></i> <i class="fa fa-code-fork" aria-hidden="true"></i> GitHub REPO</a></div>
-            </div>
-
-            <div id="projectContainer" class="projectContainer">
-                <h1>Drag &amp; Drop Section Tabs Manager</h1>
-
-                <!-- Container to hold all of the active section tabs -->
-                <div id="tabs_outer_container" class="tab_container">
-
-                    <ul id="active_tabs" class="ui-sortable">
-                        <li id="tab_id_1" class="single_tab mobile exclude" data-order="1" data-typeid="4" data-typename="fruit">
-                            <a href="#" name="tab1">fruit</a>
-                        </li>
-                        <li id="tab_id_2" class="single_tab mobile ui-sortable-handle" data-order="2" data-typeid="38" data-typename="vegitable">
-                            <a href="#" name="tab2">vegitable</a>
-                        </li>
-                        <li id="tab_id_3" class="single_tab mobile ui-sortable-handle" data-order="3" data-typeid="19" data-typename="bakery">
-                            <a href="#" name="tab3">bakery</a>
-                        </li>
-                        <li id="tab_id_4" class="single_tab ui-sortable-handle" data-order="4" data-typeid="2" data-typename="dairy">
-                            <a href="#" name="tab4">dairy</a>
-                        </li>
-                    </ul>
-                    
-                    <div class="mobile_tabs_indicator">MOBILE TABS</div>
-                    
-                    <div>
-                        <div class="extra_tabs_container">
-                            ADDITIONAL UNUSED TAB OPTIONS
-                            <div id="inacitveTabs" class="">
-                                <ul id="extra_tabs" class="ui-sortable">
-                                    <li id="tab_id_5" class="single_tab ui-sortable-handle" data-order="0" data-typeid="9" data-typename="frozen">
-                                        <a href="#" name="tab5">frozen</a>
-                                    </li>
-                                    <li id="tab_id_6" class="single_tab ui-sortable-handle" data-order="0" data-typeid="15" data-typename="meat">
-                                        <a href="#" name="tab6">meat</a>
-                                    </li>
-                                    <li id="tab_id_7" class="single_tab ui-sortable-handle" data-order="0" data-typeid="24" data-typename="seafood">
-                                        <a href="#" name="tab7">seafood</a>
-                                    </li>
-                                </ul>
+                        <ul id="active_tabs" class="ui-sortable">
+                            <li id="tab_id_1" class="single_tab mobile exclude" data-order="1" data-typeid="4" data-typename="fruit">
+                                <a href="#" name="tab1">fruit</a>
+                            </li>
+                            <li id="tab_id_2" class="single_tab mobile ui-sortable-handle" data-order="2" data-typeid="38" data-typename="vegitable">
+                                <a href="#" name="tab2">vegitable</a>
+                            </li>
+                            <li id="tab_id_3" class="single_tab mobile ui-sortable-handle" data-order="3" data-typeid="19" data-typename="bakery">
+                                <a href="#" name="tab3">bakery</a>
+                            </li>
+                            <li id="tab_id_4" class="single_tab ui-sortable-handle" data-order="4" data-typeid="2" data-typename="dairy">
+                                <a href="#" name="tab4">dairy</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="mobile_tabs_indicator">MOBILE TABS</div>
+                        
+                        <div>
+                            <div class="extra_tabs_container">
+                                ADDITIONAL UNUSED TAB OPTIONS
+                                <div id="inacitveTabs" class="">
+                                    <ul id="extra_tabs" class="ui-sortable">
+                                        <li id="tab_id_5" class="single_tab ui-sortable-handle" data-order="0" data-typeid="9" data-typename="frozen">
+                                            <a href="#" name="tab5">frozen</a>
+                                        </li>
+                                        <li id="tab_id_6" class="single_tab ui-sortable-handle" data-order="0" data-typeid="15" data-typename="meat">
+                                            <a href="#" name="tab6">meat</a>
+                                        </li>
+                                        <li id="tab_id_7" class="single_tab ui-sortable-handle" data-order="0" data-typeid="24" data-typename="seafood">
+                                            <a href="#" name="tab7">seafood</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="update_container">
+                                <button type="submit" id="submitNewTabOrder" class="smOrderUpdateButton disable" value="update" disabled="disabled">Save Tab Options</button>
                             </div>
                         </div>
-                        
-                        <div class="update_container">
-                            <button type="submit" id="submitNewTabOrder" class="smOrderUpdateButton disable" value="update" disabled="disabled">Save Tab Options</button>
-                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </body>
 </html>
