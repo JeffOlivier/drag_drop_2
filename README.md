@@ -10,7 +10,7 @@ _This tool is built using the following:_
 
 - JavaScript ES6
 - jQuery's _sortable_
-- Modular Sass
+- Sass
 
 [Working Demo](http://dragdroptabs.jeffolivier.codes)
 
@@ -18,13 +18,13 @@ _This tool is built using the following:_
 
 **Green tabs** will be shown on only the mobile-sized (whatever you determine) screen widths of your site\
 **Blue tabs** will be shown on all screen widths of your site\
-**gray tabs** are additional ones that you can add to your menu
+**Gray tabs** are additional ones that you can add to your menu
 
-- The initial order of the tabs is preset
+- The initial order of the tabs is preset for this demonstration
 - Mobile-sized screens will show only 3 tabs (represented as green tabs), and larger screens can show up to 5
 - You can rearrange the order of the green and blue tabs
-- You can move a tab that is being used (blue and green tabs) to the white box to remove it from being seen/used
-- You can add a new tab to your active menu by grabbing a gray one in the white area and moving it inline with the green/blue icons
+- Move a blue or green tab to the white box to remove it from being seen/used
+- Add a new tab to your active menu by moving a gray one from the white area inline with the green/blue icons
 - The **Save Tab Options** button only becomes **_active_** when there is an actual change to be saved
 - You can rearrange the order that the tabs are shown in, then hit **_save_**
 - The **_save_** button does not actually save the new order since this is just a demo
