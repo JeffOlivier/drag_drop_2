@@ -79,6 +79,8 @@ a {
 				visibility: hidden;
 				opacity: 0;
 				width: 0px;
+				height: 0px;
+				min-height: 300px;
 				transition: all 0.7s linear;
 			
 				h3 {
@@ -97,6 +99,7 @@ a {
 			visibility: visible;
 			opacity: 1;
 			width: 820px;
+			height: auto;
 		}
 		.menuItem.purpose:hover .arrow {
 			transform: rotate(180deg);
@@ -106,6 +109,7 @@ a {
 			visibility: visible;
 			opacity: 1;
 			width: 820px;
+			height: auto;
 		}
 		.menuItem.howToUse:hover .arrow {
 			transform: rotate(180deg);
